@@ -546,4 +546,80 @@
     overflow-x: auto;
     padding-bottom: 0.5rem;
   }
+
+  /* Responsif untuk Tabel Aktivitas */
+  .table-container {
+    overflow-x: auto; /* Membuat tabel bisa digulir secara horizontal */
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1.5rem;
+  }
+
+  .activity-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .activity-table th, .activity-table td {
+    padding: 0.75rem 1rem; /* Mengatur padding untuk ruang lebih di perangkat kecil */
+  }
+
+  .activity-table th {
+    text-align: left;
+    font-size: 0.875rem;
+  }
+
+  .activity-table td {
+    font-size: 0.875rem;
+  }
+
+  /* Responsive Pagination */
+  .pagination-controls {
+    flex-direction: column; /* Mengubah arah kontrol pagination ke kolom di perangkat kecil */
+    gap: 0.5rem; /* Mengurangi jarak antara tombol pagination */
+  }
+
+  .pagination-button {
+    width: 100%; /* Membuat tombol pagination mengisi lebar kontainer di perangkat kecil */
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .pagination-info {
+    font-size: 1rem;
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    margin-top: 1rem;
+  }
+
+  /* Responsif untuk ukuran layar lebih kecil */
+  @media (max-width: 1024px) {
+    .table-card {
+      padding: 1rem; /* Mengurangi padding untuk lebih banyak ruang pada layar lebih kecil */
+    }
+
+    .pagination-controls {
+      flex-direction: column; /* Mengubah arah pagination menjadi vertikal pada layar kecil */
+    }
+  }
+
+  @media (max-width: 640px) {
+    .activity-table th, .activity-table td {
+      font-size: 0.75rem; /* Mengurangi ukuran font agar lebih nyaman dibaca pada perangkat kecil */
+      padding: 0.5rem; /* Mengurangi padding untuk mengoptimalkan ruang */
+    }
+
+    .pagination-controls {
+      justify-content: center;
+      gap: 0.25rem; /* Mengurangi jarak antara tombol pagination */
+    }
+
+    /* Tabel dan pagination lebih responsif pada layar ponsel */
+    .table-container {
+      padding: 0 1rem;
+    }
+
+    .pagination-button {
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+    }
+  }
 }
